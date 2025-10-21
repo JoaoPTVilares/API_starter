@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build mockapi",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-D_WIN32_WINNT=0x0A00",
+                "-DWINVER=0x0A00",
+                "${workspaceFolder}\\main.cpp",
+                "-I${workspaceFolder}\\include",
+                "-o",
+                "${workspaceFolder}\\app.exe",
+                "-lws2_32"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
